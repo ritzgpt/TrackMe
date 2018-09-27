@@ -7,6 +7,8 @@ import java.util.List;
 List Operations using Java8 Features
  */
 public class ListOperation {
+    static List<String> strList=new ArrayList<>();
+    static List<String> strList2=new ArrayList<>();
     public static void main(String args[]) {
         findRecord();
     }
@@ -14,7 +16,11 @@ public class ListOperation {
     Let you have two list, you need to check how many records exists in other list
      */
     static void findRecord(){
-        List<String> strList=new ArrayList<>();
+        setList();
+        strList2.retainAll(strList);
+        strList2.forEach(System.out::println);
+    }
+    static void setList(){
         strList.add("A");
         strList.add("B");
         strList.add("C");
@@ -26,8 +32,6 @@ public class ListOperation {
         strList.add("I");
         strList.add("J");
 
-
-        List<String> strList2=new ArrayList<>();
         strList2.add("A");
         strList2.add("B");
         strList2.add("C1");
@@ -38,8 +42,5 @@ public class ListOperation {
         strList2.add("H2");
         strList2.add("I2");
         strList2.add("J2");
-
-        strList2.forEach(System.out::println);
-
     }
 }

@@ -10,6 +10,9 @@ public class ListOperation {
     public static void main(String args[]) {
         findRecord();
     }
+    /*
+    Let you have two list, you need to check how many records exists in other list
+     */
     static void findRecord(){
         List<String> strList=new ArrayList<>();
         strList.add("A");
